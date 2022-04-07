@@ -3,7 +3,6 @@ const routes = {
     NewsList: 'NewsList',
     NewsDetails: 'NewsDetails',
     Settings: 'Settings'
-
 };
 
 export default routes;

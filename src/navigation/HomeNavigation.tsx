@@ -4,6 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import HomeScreen from '../screens/HomeScreen';
 import NewsDetailsScreen from '../screens/NewsDetailsScreen';
 import routes from './routes';
+import {getLocaleValue} from '../utilites/Locale';
 const StackNavigator = createNativeStackNavigator();
 
 const HomeNavigation: FC = () => {
@@ -20,7 +21,7 @@ const HomeNavigation: FC = () => {
         name={routes.NewsDetails}
         component={NewsDetailsScreen}
         options={{
-          title: 'Details',
+          title: getLocaleValue('newsDetails'),
         }}
       />
     </StackNavigator.Navigator>

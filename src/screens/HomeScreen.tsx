@@ -14,7 +14,6 @@ import routes from '../navigation/routes';
 import NewsResponse from '../services/ApiModels/NewsResponse';
 import Article from '../services/ApiModels/Article';
 import {getUIdByDynamicLink} from '../utilites/HelperDeepLink';
-import NewsDetailsScreen from './NewsDetailsScreen';
 
 const HomeScreen = props => {
   const [dataApi, setData] = useState<NewsResponse>();
@@ -28,12 +27,13 @@ const HomeScreen = props => {
     getData();
   }, []);
   useEffect(() => {
+    async function invokeDeepLink() {
+      const id = await getUIdByDynamicLink();
+      if (id) props.navigation.navigate(routes.NewsDetails, {id: id});
+    }
     invokeDeepLink();
   }, []);
-  async function invokeDeepLink() {
-    const id = await getUIdByDynamicLink();
-    if (id) props.navigation.navigate(routes.NewsDetails, {id: id});
-  }
+
   const Item = ({data}: {data: Article}) => (
     <View style={styles.item}>
       <Image style={styles.logo} source={{uri: data.urlToImage}} />

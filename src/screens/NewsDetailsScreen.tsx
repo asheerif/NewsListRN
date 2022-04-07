@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet, StatusBar, Image} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
+import {getLocaleValue} from '../utilites/Locale';
 
 const NewsDetailsScreen = props => {
   return (
@@ -10,13 +11,13 @@ const NewsDetailsScreen = props => {
           style={styles.logo}
           source={{uri: props.route.params.response.urlToImage}}
         />
-        <Text style={styles.header}>Title</Text>
+        <Text style={styles.header}>{getLocaleValue('title')}</Text>
         <Text style={styles.title}>{props.route.params.response.title}</Text>
-        <Text style={styles.header}>Description</Text>
+        <Text style={styles.header}>{getLocaleValue('description')}</Text>
         <Text style={styles.title}>
           {props.route.params.response.description}
         </Text>
-        <Text style={styles.header}>Published At </Text>
+        <Text style={styles.header}>{getLocaleValue('publishedAt')}</Text>
         <Text style={styles.title}>
           {props.route.params.response.publishedAt}
         </Text>
