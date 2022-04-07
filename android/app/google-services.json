@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "177053486579",
+    "project_id": "voisnewsapp-1eced",
+    "storage_bucket": "voisnewsapp-1eced.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:177053486579:android:a0732b93482802e6fd9686",
+        "android_client_info": {
+          "package_name": "com.voisnewsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "177053486579-tgf2id90aocogt27bl5ckiq8fspeomv8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPYfY9ztrl7MO79BEDyDrSQcpvjVBmgxM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "177053486579-tgf2id90aocogt27bl5ckiq8fspeomv8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
