@@ -4,5 +4,6 @@ description:'Beschreibung',
 publishedAt:'Veröffentlicht am',
 settigns:'Einstellungen',
 home:'Heim',
-newsDetails:'Nachrichten Details'
+newsDetails:'Nachrichten Details',
+lang:'de'
 };

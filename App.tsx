@@ -1,8 +1,13 @@
-import React from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import MainContainer from './src/navigation/MainContainer';
-import {setLocale, getLocaleValue} from './src/utilites/Locale';
-setLocale('de');
+import {setLocale} from './src/utilites/Locale';
+import {getLanguage} from './src/utilites/Locale/localHelper';
 const App = () => {
+  (async () => {
+    const _language = await getLanguage();
+    setLocale(_language);
+  })();
+
   return <MainContainer />;
 };
 

@@ -4,5 +4,6 @@ description:'Description',
 publishedAt:'Published At',
 settigns:'Settings',
 home:'Home',
-newsDetails:'News Details'
+newsDetails:'News Details',
+lang:'en'
 };

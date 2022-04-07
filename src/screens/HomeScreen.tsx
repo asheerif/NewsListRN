@@ -14,6 +14,7 @@ import routes from '../navigation/routes';
 import NewsResponse from '../services/ApiModels/NewsResponse';
 import Article from '../services/ApiModels/Article';
 import {getUIdByDynamicLink} from '../utilites/HelperDeepLink';
+import SearchBar from '../components/searchbar';
 
 const HomeScreen = props => {
   const [dataApi, setData] = useState<NewsResponse>();
@@ -50,6 +51,8 @@ const HomeScreen = props => {
 
   return (
     <SafeAreaView style={styles.newsContainer}>
+      <SearchBar searchPlaceHolder={'Search '} onSearch={() => {}} />
+
       <FlatList
         data={dataApi?.articles}
         renderItem={renderItem}
