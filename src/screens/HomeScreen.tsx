@@ -30,7 +30,7 @@ const HomeScreen = props => {
   useEffect(() => {
     async function invokeDeepLink() {
       const id = await getUIdByDynamicLink();
-      if (id) props.navigation.navigate(routes.NewsDetails, {id: id});
+      if (id) props.navigation.navigate(routes.Settings, {id: id});
     }
     invokeDeepLink();
   }, []);

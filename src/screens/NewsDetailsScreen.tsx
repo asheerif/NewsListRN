@@ -9,17 +9,17 @@ const NewsDetailsScreen = props => {
       <View style={styles.item}>
         <Image
           style={styles.logo}
-          source={{uri: props.route.params.response.urlToImage}}
+          source={{uri: props.route.params.response?.urlToImage}}
         />
         <Text style={styles.header}>{getLocaleValue('title')}</Text>
-        <Text style={styles.title}>{props.route.params.response.title}</Text>
+        <Text style={styles.title}>{props.route.params.response?.title}</Text>
         <Text style={styles.header}>{getLocaleValue('description')}</Text>
         <Text style={styles.title}>
           {props.route.params.response.description}
         </Text>
         <Text style={styles.header}>{getLocaleValue('publishedAt')}</Text>
         <Text style={styles.title}>
-          {props.route.params.response.publishedAt}
+          {props.route.params.response?.publishedAt}
         </Text>
       </View>
     </ScrollView>
